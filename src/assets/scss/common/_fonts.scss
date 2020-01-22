@@ -1,0 +1,49 @@
+@import "constants/constants";
+
+// Light
+@font-face {
+    font-family: $font-light;
+    font-style: normal;
+    font-weight: normal;
+    src: url("#{$font-path}/raleway-light.eot");
+    src: url("#{$font-path}/raleway-light.eot?#iefix") format("embedded-opentype"),
+        url("#{$font-path}/raleway-light.woff") format("woff"),
+        url("#{$font-path}/raleway-light.ttf") format("truetype"),
+        url("#{$font-path}/raleway-light.svg#raleway-light") format("svg");
+}
+
+// Regular
+@font-face {
+    font-family: $font-regular;
+    font-style: normal;
+    font-weight: normal;
+    src: url("#{$font-path}/raleway-regular.eot");
+    src: url("#{$font-path}/raleway-regular.eot?#iefix") format("embedded-opentype"),
+        url("#{$font-path}/raleway-regular.woff") format("woff"),
+        url("#{$font-path}/raleway-regular.ttf") format("truetype"),
+        url("#{$font-path}/raleway-regular.svg#raleway-regular") format("svg");
+}
+
+// Bold
+@font-face {
+    font-family: $font-bold;
+    font-style: normal;
+    font-weight: normal;
+    src: url("#{$font-path}/raleway-bold.eot");
+    src: url("#{$font-path}/raleway-bold.eot?#iefix") format("embedded-opentype"),
+        url("#{$font-path}/raleway-bold.woff") format("woff2"),
+        url("#{$font-path}/raleway-bold.ttf") format("truetype"),
+        url("#{$font-path}/raleway-bold.svg#raleway-bold") format("svg");
+}
+
+// Medium
+@font-face {
+    font-family: $font-medium;
+    font-style: normal;
+    font-weight: normal;
+    src: url("#{$font-path}/raleway-medium.eot");
+    src: url("#{$font-path}/raleway-medium.eot?#iefix") format("embedded-opentype"),
+        url("#{$font-path}/raleway-medium.woff") format("woff2"),
+        url("#{$font-path}/raleway-medium.ttf") format("truetype"),
+        url("#{$font-path}/raleway-medium.svg#raleway-medium") format("svg");
+}

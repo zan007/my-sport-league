@@ -1,0 +1,14 @@
+@import "./src/assets/scss/common/constants/constants.scss";
+@import "./src/assets/scss/common/mixins/mixins.scss";
+
+button {
+    display: inline-block;
+    padding: .75rem 2rem;
+    background-color: $red;
+    border-radius: 1.5rem;
+    color: $white;
+    cursor: pointer;
+    font-size: .875rem;
+
+    @include box-shadow($red);
+}
