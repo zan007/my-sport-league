@@ -20,23 +20,23 @@
                                 <div class="small-3 column">
                                     Club
                                 </div>
-                                <div class="small-1 column">
+                                <div class="hide-for-small medium-1 column">
                                     MP
                                 </div>
-                                <div class="small-1 column">
+                                <div class="medium-1 column">
                                     W
                                 </div>
-                                <div class="small-1 column">
+                                <div class="medium-1 column">
                                     R
                                 </div>
-                                <div class="small-1 column">
+                                <div class="medium-1 column">
                                     P
                                 </div>
-                                <div class="small-2 column">
+                                <div class="medium-2 column">
                                     Points
                                 </div>
-                                <div class="small-2 column">
-
+                                <div class="medium-2 column">
+                                    Form
                                 </div>
                             </div>
                         </div>
@@ -45,18 +45,19 @@
                         <div class="column small-12" *ngFor="let result of group.results">
                             <div class="row collapse result-item align-middle">
                                 <div class="small-1 column">
-                                    <span>{{result.position}}</span>
-                                    <msl-chevron
-                                        *ngIf="result.trend !== 'STABLE'"
-                                        [color]="result.trend === 'UP' ? 'green' : 'red'"
-                                        [type]="result.trend === 'UP' ? 'up' : 'down'"
-                                        [size]="'small'"
-                                    ></msl-chevron>
-                                    <span
-                                        class="dot"
-                                        *ngIf="result.trend === 'STABLE'">
-                                        .
-                                    </span>
+                                    <div class="flex-container align-middle">
+                                        <div>{{result.position}}</div>
+                                        <msl-chevron
+                                            *ngIf="result.trend !== 'STABLE'"
+                                            [color]="result.trend === 'UP' ? 'green' : 'red'"
+                                            [type]="result.trend === 'UP' ? 'up' : 'down'"
+                                            [size]="'small'"
+                                        ></msl-chevron>
+                                        <div
+                                            class="icon icon-dot"
+                                            *ngIf="result.trend === 'STABLE'">
+                                    </div>
+                                    </div>
                                 </div>
                                 <div class="small-3 column">
                                     <msl-team-avatar
@@ -76,7 +77,7 @@
                                     {{result.wins}}
                                 </div>
                                 <div class="small-1 column">
-                                    {{result.raws}}
+                                    {{result.draws}}
                                 </div>
                                 <div class="small-1 column">
                                     {{result.loses}}
@@ -87,7 +88,7 @@
                                     </div>
                                 </div>
                                 <div class="small-2 column">
-                                    Form
+                                    <msl-team-results-trend [teamResults]="result.lastMatches"></msl-team-results-trend>
                                 </div>
 
                             </div>

@@ -1,0 +1,18 @@
+@import "./src/assets/scss/common/constants/constants";
+
+.icon-dot {
+    color: $grey;
+    font-size: .5rem;
+}
+
+.win {
+    &.icon-dot {
+        color: $green;
+    }
+}
+
+.lose {
+    &.icon-dot {
+        color: $red;
+    }
+}

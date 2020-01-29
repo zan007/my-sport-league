@@ -1,0 +1,9 @@
+<div class="team-results-trend">
+    <div
+        *ngFor="let trendItem of teamResults"
+        [class.win]="trendItem.type === 'WIN'"
+        [class.lose]="trendItem.type === 'LOSE'"
+        [class.draw]="trendItem.type === 'DRAW'"
+        class="icon icon-dot"
+    ></div>
+</div>

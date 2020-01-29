@@ -8,6 +8,7 @@ import { MslUserAvatarComponent } from './components/msl-user-avatar/msl-user-av
 import { MslLeagueTableComponent } from './components/msl-league-table/msl-league-table.component';
 import { MslChevronComponent } from './components/msl-chevron/msl-chevron.component';
 import { MslTeamAvatarComponent } from './components/msl-team-avatar/msl-team-avatar.component';
+import { MslTeamResultsTrendComponent } from './components/msl-team-results-trend/msl-team-results-trend.component';
 
 
 const commonComponents = [
@@ -18,6 +19,7 @@ const commonComponents = [
     MslLeagueTableComponent,
     MslChevronComponent,
     MslTeamAvatarComponent,
+    MslTeamResultsTrendComponent,
 ];
 const commonPipes = [];
 const commonServices = [

@@ -16,7 +16,7 @@ import { RoutingEffects } from './store/ui/routing/routing.effects';
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
     ],
     imports: [
         CommonModule,

@@ -28,7 +28,7 @@ export class MslLeagueTableComponent implements OnInit {
                             matchesCount: 3,
                             wins: 2,
                             loses: 1,
-                            raws: 0,
+                            draws: 0,
                             points: 6,
                             trend: 'UP',
                             lastMatches: [
@@ -52,7 +52,7 @@ export class MslLeagueTableComponent implements OnInit {
                             matchesCount: 3,
                             wins: 1,
                             loses: 2,
-                            raws: 0,
+                            draws: 0,
                             points: 3,
                             trend: 'STABLE',
                             lastMatches: [
@@ -75,17 +75,17 @@ export class MslLeagueTableComponent implements OnInit {
                             },
                             matchesCount: 3,
                             wins: 0,
-                            loses: 3,
-                            raws: 0,
+                            loses: 2,
+                            draws: 1,
                             points: 0,
                             trend: 'DOWN',
                             lastMatches: [
                                 {
                                     id: '7',
-                                    type: 'LOSE'
+                                    type: 'LOSE',
                                 }, {
                                     id: '8',
-                                    type: 'LOSE'
+                                    type: 'DRAW'
                                 }, {
                                     id: '9',
                                     type: 'LOSE'
