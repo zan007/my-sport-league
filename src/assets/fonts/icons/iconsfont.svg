@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="no"?> 
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <font id="iconsfont" horiz-adv-x="20">
+    <font-face font-family="iconsfont"
+      units-per-em="20" ascent="20"
+      descent="0" />
+    <missing-glyph horiz-adv-x="0" />
+    <glyph glyph-name="dot"
+      unicode="&#xF101;"
+      horiz-adv-x="20" d=" M10 17C6.134 17 3 13.867 3 10C3 6.135 6.134 3 10 3S17 6.135 17 10C17 13.867 13.866 17 10 17z" />
+  </font>
+</defs>
+</svg>
