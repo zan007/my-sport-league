@@ -1,1 +1,18 @@
-<p>msl-main-header works!</p>
+<header class="flex-container">
+    <div class="column">
+        <div class="row full-height align-justify align-middle">
+            <div class="column shrink">
+                LOGO
+            </div>
+            <div class="column full-height">
+                <div class="flex-container align-middle align-right full-height">
+                    <div class="menu-item flex-container full-height align-middle"
+                         *ngFor="let navigationItem of (navigationItems | async)">
+                        <div>{{navigationItem.title}}</div>
+                    </div>
+                    <msl-user-avatar></msl-user-avatar>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,69 @@
+@import "./src/assets/scss/common/constants/constants";
+@import "./src/assets/scss/common/mixins/mixins";
+
+.chevron {
+    position: relative;
+    width: 1rem;
+    margin-left: .5rem;
+
+    &::before {
+        position: absolute;
+        top: 47.5%;
+        right: 0;
+        left: 0;
+        width: 9px;
+        height: 9px;
+        margin: 0 auto;
+        border-bottom: .075rem solid $grey;
+        border-right: .075rem solid $grey;
+        content: "";
+        outline: 1px solid transparent;
+
+        @include transition(transform, .2s, ease);
+    }
+
+    &.down {
+        &::before {
+            transform: translate3d(0, -50%, 0) rotate(45deg);
+        }
+    }
+
+    &.up {
+        &::before {
+            transform: translate3d(0, -50%, 0) rotate(-135deg);
+        }
+    }
+
+    &.small {
+        &::before {
+            width: 4px;
+            height: 4px;
+        }
+    }
+
+    &.medium {
+        &::before {
+            width: 9px;
+            height: 9px;
+        }
+    }
+
+    &.large {
+        &::before {
+            width: 1rem;
+            height: 1rem;
+        }
+    }
+
+    &.red {
+        &::before {
+            border-color: $red;
+        }
+    }
+
+    &.green {
+        &::before {
+            border-color: $green;
+        }
+    }
+}

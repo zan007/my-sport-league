@@ -1,0 +1,17 @@
+@import "./src/assets/scss/common/constants/constants";
+
+.match-of-the-day {
+    padding: 1rem;
+    min-height: 200px;
+}
+
+h2 {
+    color: $white;
+    font-family: $font-regular;
+    font-size: 1.5rem;
+}
+
+h3 {
+    color: $grey;
+    font-family: $font-regular;
+}

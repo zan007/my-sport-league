@@ -1,0 +1,37 @@
+@import "./src/assets/scss/common/constants/constants";
+
+.league-table {
+    padding: 1rem;
+}
+
+.table-header {
+    color: $grey;
+    font-size: .8125rem;
+}
+
+.group-name {
+    margin-bottom: 1rem;
+    font-size: .875rem;
+}
+
+.table-content {
+    font-family: $font-light;
+
+    .team-name {
+        display: inline;
+        margin-left: .5rem;
+    }
+
+    .team-name,
+    .points {
+        font-family: $font-medium;
+    }
+
+    .result-item {
+        min-height: 3rem;
+    }
+}
+
+.dot {
+    color: $grey;
+}

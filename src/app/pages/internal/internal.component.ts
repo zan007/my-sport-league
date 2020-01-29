@@ -1,12 +1,20 @@
-import {Component} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'internal',
-  templateUrl: './internal.html',
-  styleUrls: ['./internal.scss']
+    selector: 'internal',
+    templateUrl: './internal.html',
+    styleUrls: ['./internal.scss']
 })
-export class InternalComponent {
-  constructor () {
+export class InternalComponent implements OnInit {
 
-  }
+
+    constructor() {
+
+    }
+
+    ngOnInit() {
+
+    }
+
+
 }

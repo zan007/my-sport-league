@@ -1,0 +1,100 @@
+<div class="league-table">
+    <div class="row">
+        <div class="small-20 column" *ngFor="let league of leagues">
+            <div class="row align-center">
+                <p class="column">{{league.name}}</p>
+            </div>
+            <div class="row align-center" *ngFor="let group of league.groups">
+                <div class="small-11 column">
+                    <div class="row">
+                        <div class="group-name">
+                            {{group.name}}
+                        </div>
+                    </div>
+                    <div class="row align-center table-header">
+                        <div class="column">
+                            <div class="row collapse">
+                                <div class="small-1 column">
+                                    Pos
+                                </div>
+                                <div class="small-3 column">
+                                    Club
+                                </div>
+                                <div class="small-1 column">
+                                    MP
+                                </div>
+                                <div class="small-1 column">
+                                    W
+                                </div>
+                                <div class="small-1 column">
+                                    R
+                                </div>
+                                <div class="small-1 column">
+                                    P
+                                </div>
+                                <div class="small-2 column">
+                                    Points
+                                </div>
+                                <div class="small-2 column">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row table-content align-center">
+                        <div class="column small-12" *ngFor="let result of group.results">
+                            <div class="row collapse result-item align-middle">
+                                <div class="small-1 column">
+                                    <span>{{result.position}}</span>
+                                    <msl-chevron
+                                        *ngIf="result.trend !== 'STABLE'"
+                                        [color]="result.trend === 'UP' ? 'green' : 'red'"
+                                        [type]="result.trend === 'UP' ? 'up' : 'down'"
+                                        [size]="'small'"
+                                    ></msl-chevron>
+                                    <span
+                                        class="dot"
+                                        *ngIf="result.trend === 'STABLE'">
+                                        .
+                                    </span>
+                                </div>
+                                <div class="small-3 column">
+                                    <msl-team-avatar
+                                        [size]="'small'"
+                                        [img]="result.team.avatarImgSrc"
+                                        [description]="result.team.name"
+                                    >
+                                    </msl-team-avatar>
+                                    <div class="team-name">
+                                        {{result.team.name}}
+                                    </div>
+                                </div>
+                                <div class="small-1 column">
+                                    {{result.matchesCount}}
+                                </div>
+                                <div class="small-1 column">
+                                    {{result.wins}}
+                                </div>
+                                <div class="small-1 column">
+                                    {{result.raws}}
+                                </div>
+                                <div class="small-1 column">
+                                    {{result.loses}}
+                                </div>
+                                <div class="small-2 column">
+                                    <div class="points">
+                                        {{result.points}}
+                                    </div>
+                                </div>
+                                <div class="small-2 column">
+                                    Form
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

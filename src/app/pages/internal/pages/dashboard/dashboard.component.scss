@@ -1,0 +1,13 @@
+@import "./src/assets/scss/common/constants/constants";
+
+.dashboard {
+    section {
+        background-color: $almost-black;
+        border: solid 1px $red;
+        border-radius: 1rem;
+    }
+}
+
+.empty-section {
+    min-height: 500px;
+}

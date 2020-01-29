@@ -1,0 +1,71 @@
+// Transition
+@mixin transition($property: all, $speed: 300ms, $ease: ease-out, $delay: null) {
+    $transition: none;
+
+    transition: $transition;
+
+    @if length($property) > 1 {
+        @each $transition-list in $property {
+            @for $i from 1 through length($transition-list) {
+                @if $i == 1 {
+                    $_property: nth($transition-list, $i);
+                }
+
+                @if length($transition-list) > 1 {
+                    @if $i == 2 {
+                        $_speed: nth($transition-list, $i);
+                    }
+                }
+
+                @else {
+                    $_speed: $speed;
+                }
+
+                @if length($transition-list) > 2 {
+                    @if $i == 3 {
+                        $_ease: nth($transition-list, $i);
+                    }
+                }
+
+                @else {
+                    $_ease: $ease;
+                }
+
+                @if length($transition-list) > 3 {
+                    @if $i == 4 {
+                        $_delay: nth($transition-list, $i);
+                    }
+                }
+
+                @else {
+                    $_delay: $delay;
+                }
+            }
+
+            @if $transition == none {
+                $transition: $_property $_speed $_ease $_delay;
+            }
+
+            @else {
+                $transition: $transition, $_property $_speed $_ease $_delay;
+            }
+        }
+    }
+
+    @else {
+        @each $prop in $property {
+            @if $transition == none {
+                $transition: $prop $speed $ease $delay;
+            }
+
+            @else {
+                $transition: $transition, $prop $speed $ease $delay;
+            }
+        }
+    }
+}
+
+// Opacity transition
+@mixin opacity ($t) {
+    transition: opacity $t ease-in-out, visibility $t ease-in-out, transform $t ease-in-out;
+}

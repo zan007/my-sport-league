@@ -1,0 +1,22 @@
+@import "./src/assets/scss/common/constants/constants";
+
+.team-avatar {
+    display: inline;
+    background-color: transparent;
+    border-radius: 50%;
+
+    &.small {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    &.medium {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    &.large {
+        width: 3rem;
+        height: 3rem;
+    }
+}
