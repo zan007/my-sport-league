@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { sizes } from '../../types/sizes';
+import { Sizes } from '../../types/sizes';
 
 @Component({
     selector: 'msl-team-avatar',
@@ -15,7 +15,7 @@ export class MslTeamAvatarComponent implements OnInit {
     description?: string;
 
     @Input()
-    size: sizes = 'small';
+    size: Sizes = 'small';
 
     constructor() {
     }

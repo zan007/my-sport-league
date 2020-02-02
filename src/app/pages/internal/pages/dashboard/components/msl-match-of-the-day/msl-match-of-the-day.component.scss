@@ -1,8 +1,8 @@
 @import "./src/assets/scss/common/constants/constants";
 
 .match-of-the-day {
-    padding: 1rem;
     min-height: 200px;
+    padding: 1rem;
 }
 
 h2 {
@@ -11,7 +11,7 @@ h2 {
     font-size: 1.5rem;
 }
 
-h3 {
+.league-name {
     color: $grey;
     font-family: $font-regular;
 }

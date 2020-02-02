@@ -1,8 +1,19 @@
 <div class="match-of-the-day">
     <div class="row">
         <div class="column text-center">
-            <h2 class="no-margin">Mecz dnia</h2>
-            <h3 class="no-margin">Nazwa ligi</h3>
+            <h2 class="no-margin">Today matches</h2>
+        </div>
+    </div>
+    <div *ngFor="let todayLeagueMatch of todayLeagueMatches">
+        <p class="league-name">{{todayLeagueMatch.league.name}}</p>
+        <div class="row align-center-middle">
+            <div class="small-12 large-9 column">
+                <msl-match
+                    *ngFor="let match of todayLeagueMatch.matches"
+                    [teamAvatarSize]="'large'"
+                    [matchData]="match"
+                ></msl-match>
+            </div>
         </div>
     </div>
 </div>

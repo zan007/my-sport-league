@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { sizes } from '../../types/sizes';
+import { Sizes } from '../../types/sizes';
 
 @Component({
     selector: 'msl-chevron',
@@ -15,7 +15,7 @@ export class MslChevronComponent implements OnInit {
     color: 'red' | 'green' | 'grey' = 'grey';
 
     @Input()
-    size: sizes = 'medium';
+    size: Sizes = 'medium';
 
     constructor() {
     }

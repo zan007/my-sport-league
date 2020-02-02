@@ -6,12 +6,7 @@
     word-wrap: break-word;
 }
 
-.team-name {
-    max-width: 3.7rem;
-}
-
 .score {
-    min-width: 2.7rem;
     max-height: 1.7rem;
     padding: .2rem;
     background: $red;
@@ -21,7 +16,7 @@
     text-align: center;
 
     .single-score {
-        min-width: 1.5rem;
+        min-width: 1rem;
     }
 }
 

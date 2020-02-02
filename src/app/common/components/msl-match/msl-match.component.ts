@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MatchData } from '../../types/match-data';
+import { Sizes } from '../../types/sizes';
 
 @Component({
     selector: 'msl-match',
@@ -13,6 +14,9 @@ export class MslMatchComponent implements OnInit {
 
     @Input()
     matchDate?: string;
+
+    @Input()
+    teamAvatarSize?: Sizes = 'small';
 
 
     constructor() {

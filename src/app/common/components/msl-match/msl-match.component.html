@@ -1,43 +1,61 @@
 <div class="match">
-    <div class="flex-container align-justify align-middle">
+    <div class="row collapse align-middle">
 
         <div
             *ngIf="matchDate"
-            class="match-date"
+            class="small-2 column match-date"
         >
             {{matchDate | mslDate: 'short'}}
         </div>
 
-        <div class="flex-container align-justify align-middle">
-            <div class="team flex-container align-middle">
-                <div class="team-name text-ellipsis">{{matchData['1'].team.name}}</div>
-                <msl-team-avatar
-                    [img]="matchData['1'].team.logoUrl"
-                ></msl-team-avatar>
-            </div>
-            <div class="score flex-container align-justify"
-                 *ngIf="matchData['1'].result"
-            >
-                <div class="single-score">{{matchData['1'].result.score}}</div>
-                <div class="separator">
-                    :
+        <div class="column align-middle">
+            <div class="row collapse align-justify">
+                <div class="column">
+                    <div class="team row collapse align-middle">
+                        <div class="column">
+                            <div class="team-name text-ellipsis">{{matchData['1'].team.name}}</div>
+                        </div>
+                        <div class="small-5 column text-center">
+                            <msl-team-avatar
+                                [size]="teamAvatarSize"
+                                [img]="matchData['1'].team.logoUrl"
+                            ></msl-team-avatar>
+                        </div>
+                    </div>
                 </div>
-                <div class="single-score">{{matchData['2'].result.score}}</div>
-            </div>
-            <div class="empty-score flex-container align-center align-middle"
-                 *ngIf="!matchData['1'].result"
-            >
-                <div class="single-score">-</div>
-                <div class="separator">
-                    :
+                <div class="column small-2 medium-3">
+                    <div class="score flex-container align-justify align-center-middle"
+                         *ngIf="matchData['1'].result"
+                    >
+                        <div class="single-score">{{matchData['1'].result.score}}</div>
+                        <div class="separator">
+                            :
+                        </div>
+                        <div class="single-score">{{matchData['2'].result.score}}</div>
+                    </div>
+                    <div class="empty-score flex-container align-center-middle full-height"
+                         *ngIf="!matchData['1'].result"
+                    >
+                        <div class="single-score">-</div>
+                        <div class="separator">
+                            :
+                        </div>
+                        <div class="single-score">-</div>
+                    </div>
                 </div>
-                <div class="single-score">-</div>
-            </div>
-            <div class="team flex-container align-middle">
-                <msl-team-avatar
-                    [img]="matchData['1'].team.logoUrl"
-                ></msl-team-avatar>
-                <div class="team-name text-ellipsis">{{matchData['2'].team.name}}</div>
+                <div class="column">
+                    <div class="team row collapse align-middle">
+                        <div class="small-5 column text-center">
+                            <msl-team-avatar
+                                [size]="teamAvatarSize"
+                                [img]="matchData['2'].team.logoUrl"
+                            ></msl-team-avatar>
+                        </div>
+                        <div class="column text-right">
+                            <div class="team-name text-ellipsis">{{matchData['2'].team.name}}</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
