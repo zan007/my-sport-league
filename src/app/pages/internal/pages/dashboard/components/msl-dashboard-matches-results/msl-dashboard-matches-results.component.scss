@@ -1,0 +1,15 @@
+.matches-results {
+    padding: 1rem;
+}
+
+.group-name {
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    border-left: solid 1px #D31414;
+    font-size: .875rem;
+}
+
+.single-match:not(:last-of-type) {
+    display: block;
+    margin-bottom: 1.5rem;
+}
