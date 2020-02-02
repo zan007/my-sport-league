@@ -23,7 +23,7 @@ export class MslLeagueTableComponent implements OnInit {
                             position: '1',
                             team: {
                                 name: 'Bears',
-                                avatarImgSrc: 'https://logodix.com/logo/930651.png'
+                                logoUrl: 'https://logodix.com/logo/930651.png'
                             },
                             matchesCount: 3,
                             wins: 2,
@@ -47,7 +47,7 @@ export class MslLeagueTableComponent implements OnInit {
                             position: '2',
                             team: {
                                 name: 'Sharks',
-                                avatarImgSrc: 'https://owlsports.com/images/logos/Husky_.png'
+                                logoUrl: 'https://owlsports.com/images/logos/Husky_.png'
                             },
                             matchesCount: 3,
                             wins: 1,
@@ -71,7 +71,7 @@ export class MslLeagueTableComponent implements OnInit {
                             position: '3',
                             team: {
                                 name: 'Ducks',
-                                avatarImgSrc: 'https://cdn.bleacherreport.net/images/team_logos/328x328/maine.png'
+                                logoUrl: 'https://cdn.bleacherreport.net/images/team_logos/328x328/maine.png'
                             },
                             matchesCount: 3,
                             wins: 0,

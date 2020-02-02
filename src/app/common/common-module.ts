@@ -9,6 +9,9 @@ import { MslLeagueTableComponent } from './components/msl-league-table/msl-leagu
 import { MslChevronComponent } from './components/msl-chevron/msl-chevron.component';
 import { MslTeamAvatarComponent } from './components/msl-team-avatar/msl-team-avatar.component';
 import { MslTeamResultsTrendComponent } from './components/msl-team-results-trend/msl-team-results-trend.component';
+import { MslSignificantLinkComponent } from './components/msl-significant-link/msl-significant-link.component';
+import { MslMatchComponent } from './components/msl-match/msl-match.component';
+import { MslDatePipe } from './pipes/msl-date/msl-date.pipe';
 
 
 const commonComponents = [
@@ -20,8 +23,12 @@ const commonComponents = [
     MslChevronComponent,
     MslTeamAvatarComponent,
     MslTeamResultsTrendComponent,
+    MslSignificantLinkComponent,
+    MslMatchComponent,
 ];
-const commonPipes = [];
+const commonPipes = [
+    MslDatePipe,
+];
 const commonServices = [
     ApiService,
 ];

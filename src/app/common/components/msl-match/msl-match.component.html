@@ -1,0 +1,30 @@
+<div class="match">
+    <div class="row">
+        <div class="small-2 medium-2 column" *ngIf="matchDate">
+            <div class="match-date">
+                {{matchDate | mslDate: 'short'}}
+            </div>
+        </div>
+        <div class="column">
+            <div class="flex-container align-justify">
+                <div class="team">
+                    <span>{{matchData['1'].team.name}}</span>
+                    <msl-team-avatar
+                        [img]="matchData['1'].team.logoUrl"
+                    ></msl-team-avatar>
+                </div>
+                <div class="score">
+                    <span>{{matchData['1'].result.score}}</span>
+                    :
+                    <span>{{matchData['2'].result.score}}</span>
+                </div>
+                <div class="team">
+                    <msl-team-avatar
+                        [img]="matchData['1'].team.logoUrl"
+                    ></msl-team-avatar>
+                    <span>{{matchData['2'].team.name}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

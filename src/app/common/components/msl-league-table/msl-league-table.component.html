@@ -20,22 +20,22 @@
                                 <div class="small-3 column">
                                     Club
                                 </div>
-                                <div class="hide-for-small medium-1 column">
+                                <div class="hide-for-small-only medium-1 column">
                                     MP
                                 </div>
-                                <div class="medium-1 column">
+                                <div class="hide-for-small-only medium-1 column">
                                     W
                                 </div>
-                                <div class="medium-1 column">
+                                <div class="hide-for-small-only medium-1 column">
                                     R
                                 </div>
-                                <div class="medium-1 column">
+                                <div class="hide-for-small-only medium-1 column">
                                     P
                                 </div>
-                                <div class="medium-2 column">
+                                <div class="small-2 column">
                                     Points
                                 </div>
-                                <div class="medium-2 column">
+                                <div class="hide-for-small-only medium-2 column">
                                     Form
                                 </div>
                             </div>
@@ -56,13 +56,13 @@
                                         <div
                                             class="icon icon-dot"
                                             *ngIf="result.trend === 'STABLE'">
-                                    </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="small-3 column">
                                     <msl-team-avatar
                                         [size]="'small'"
-                                        [img]="result.team.avatarImgSrc"
+                                        [img]="result.team.logoUrl"
                                         [description]="result.team.name"
                                     >
                                     </msl-team-avatar>
@@ -70,16 +70,16 @@
                                         {{result.team.name}}
                                     </div>
                                 </div>
-                                <div class="small-1 column">
+                                <div class="hide-for-small-only medium-1 column">
                                     {{result.matchesCount}}
                                 </div>
-                                <div class="small-1 column">
+                                <div class="hide-for-small-only medium-1 column">
                                     {{result.wins}}
                                 </div>
-                                <div class="small-1 column">
+                                <div class="hide-for-small-only medium-1 column">
                                     {{result.draws}}
                                 </div>
-                                <div class="small-1 column">
+                                <div class="hide-for-small-only medium-1 column">
                                     {{result.loses}}
                                 </div>
                                 <div class="small-2 column">
@@ -92,6 +92,13 @@
                                 </div>
 
                             </div>
+                        </div>
+                    </div>
+                    <div class="row align-middle">
+                        <div class="column text-center">
+                            <msl-significant-link
+                                [text]="'Show more'"
+                            ></msl-significant-link>
                         </div>
                     </div>
                 </div>

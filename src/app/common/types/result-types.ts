@@ -1,1 +1,2 @@
-export type ResultTypes = 'LOOSE' | 'WIN' | 'RAW';
+export type ResultTypes = 'LOSE' | 'WIN' | 'DRAW';
+
