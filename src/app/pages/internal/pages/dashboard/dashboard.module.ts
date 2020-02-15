@@ -5,6 +5,7 @@ import { MslMatchOfTheDayComponent } from './components/msl-match-of-the-day/msl
 import { CommonModule } from '../../../../common/common-module';
 import { MslDashboardLeaguesTableComponent } from './components/msl-dashboard-leagues-table/msl-dashboard-leagues-table.component';
 import { MslDashboardMatchesResultsComponent } from './components/msl-dashboard-matches-results/msl-dashboard-matches-results.component';
+import { MslDashboardMatchesAgendaComponent } from './components/msl-dashboard-matches-agenda/msl-dashboard-matches-agenda.component';
 
 
 @NgModule({
@@ -13,6 +14,7 @@ import { MslDashboardMatchesResultsComponent } from './components/msl-dashboard-
         MslMatchOfTheDayComponent,
         MslDashboardLeaguesTableComponent,
         MslDashboardMatchesResultsComponent,
+        MslDashboardMatchesAgendaComponent,
     ],
     imports: [
         CommonAngularModule,

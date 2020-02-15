@@ -56,6 +56,25 @@ export class MslMatchOfTheDayComponent implements OnInit {
                         },
                     },
                 }],
+            }, {
+                league: {
+                    id: '1',
+                    name: 'Second League',
+                },
+                matches: [{
+                    1: {
+                        team: {
+                            name: 'Sharks',
+                            logoUrl: 'https://owlsports.com/images/logos/Husky_.png',
+                        },
+                    },
+                    2: {
+                        team: {
+                            name: 'Ducks',
+                            logoUrl: 'https://cdn.bleacherreport.net/images/team_logos/328x328/maine.png',
+                        },
+                    },
+                }],
             },
         ];
     }

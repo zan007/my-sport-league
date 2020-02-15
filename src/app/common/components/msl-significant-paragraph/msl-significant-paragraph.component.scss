@@ -1,0 +1,7 @@
+@import "./src/assets/scss/common/constants/constants";
+
+p {
+    padding-left: 1rem;
+    border-left: solid 1px $red;
+    font-size: .875rem;
+}

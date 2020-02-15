@@ -2,15 +2,15 @@
     <div *ngFor="let league of leagues">
         <div class="row">
             <div class="column">
-                <p>{{league.name}}</p>
+                <h4>{{league.name}}</h4>
             </div>
         </div>
         <div *ngFor="let group of league.groups">
             <div class="row align-center">
                 <div class="small-12 column">
-                    <div class="group-name">
+                    <msl-significant-paragraph>
                         {{group.name}}
-                    </div>
+                    </msl-significant-paragraph>
                 </div>
             </div>
             <div class="row">

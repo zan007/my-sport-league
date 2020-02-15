@@ -1,18 +1,18 @@
-import { Component, OnInit } from '@angular/core';
-import { Match } from '../../../../../../common/types/match';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-    selector: 'msl-dashboard-matches-results',
-    templateUrl: './msl-dashboard-matches-results.component.html',
-    styleUrls: ['./msl-dashboard-matches-results.component.scss'],
+    selector: 'msl-matches-agenda',
+    templateUrl: './msl-matches-agenda.component.html',
+    styleUrls: ['./msl-matches-agenda.component.scss']
 })
-export class MslDashboardMatchesResultsComponent implements OnInit {
+export class MslMatchesAgendaComponent implements OnInit {
 
-    matches: Match[];
+    @Input()
+    limitTo?: number;
+
     leagues: any;
 
-    constructor() {
-    }
+    constructor() { }
 
     ngOnInit() {
         this.leagues = [{
@@ -21,29 +21,19 @@ export class MslDashboardMatchesResultsComponent implements OnInit {
                 {
                     name: 'Grupa 1',
                     matches: [{
-                        date: '01.11.2020',
+                        date: '11.25.2020',
                         matchData: {
                             1: {
                                 team: {
                                     name: 'Sharks',
                                     logoUrl: 'https://owlsports.com/images/logos/Husky_.png',
-                                },
-                                result: {
-                                    id: 1,
-                                    type: 'WIN',
-                                    score: '1',
-                                },
+                                }
                             },
                             2: {
                                 team: {
                                     name: 'Ducks',
                                     logoUrl: 'https://cdn.bleacherreport.net/images/team_logos/328x328/maine.png',
-                                },
-                                result: {
-                                    id: 1,
-                                    type: 'LOSE',
-                                    score: '0',
-                                },
+                                }
                             },
                         },
                     }, {
@@ -54,22 +44,11 @@ export class MslDashboardMatchesResultsComponent implements OnInit {
                                     name: 'Sharks',
                                     logoUrl: 'https://owlsports.com/images/logos/Husky_.png',
                                 },
-                                result: {
-                                    id: 1,
-                                    type: 'WIN',
-                                    score: '10',
-                                },
                             },
                             2: {
                                 team: {
                                     name: 'Ducks',
                                     logoUrl: 'https://cdn.bleacherreport.net/images/team_logos/328x328/maine.png',
-                                },
-                                result: {
-                                    id: 1,
-                                    type: 'LOSE',
-                                    score: '0',
-
                                 },
                             },
                         },
@@ -81,21 +60,11 @@ export class MslDashboardMatchesResultsComponent implements OnInit {
                                     name: 'Sharks',
                                     logoUrl: 'https://owlsports.com/images/logos/Husky_.png',
                                 },
-                                result: {
-                                    id: 1,
-                                    type: 'DRAW',
-                                    score: '2',
-                                },
                             },
                             2: {
                                 team: {
                                     name: 'Ducks',
                                     logoUrl: 'https://cdn.bleacherreport.net/images/team_logos/328x328/maine.png',
-                                },
-                                result: {
-                                    id: 1,
-                                    type: 'DRAW',
-                                    score: '2',
                                 },
                             },
                         },

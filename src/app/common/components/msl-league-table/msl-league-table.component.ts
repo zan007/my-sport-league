@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
     selector: 'msl-league-table',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./msl-league-table.component.scss'],
 })
 export class MslLeagueTableComponent implements OnInit {
+
+    @Input()
+    limitTo?: number;
 
     leagues: any = {};
 

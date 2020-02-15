@@ -3,7 +3,7 @@
 
         <div
             *ngIf="matchDate"
-            class="small-2 column match-date"
+            class="shrink column match-date text-center"
         >
             {{matchDate | mslDate: 'short'}}
         </div>
@@ -12,18 +12,19 @@
             <div class="row collapse align-justify">
                 <div class="column">
                     <div class="team row collapse align-middle">
-                        <div class="column">
+                        <div class="column text-center">
                             <div class="team-name text-ellipsis">{{matchData['1'].team.name}}</div>
                         </div>
-                        <div class="small-5 column text-center">
+                        <div class="shrink column text-center">
                             <msl-team-avatar
+                                class="avatar"
                                 [size]="teamAvatarSize"
                                 [img]="matchData['1'].team.logoUrl"
                             ></msl-team-avatar>
                         </div>
                     </div>
                 </div>
-                <div class="column small-2 medium-3">
+                <div class="column shrink">
                     <div class="score flex-container align-justify align-center-middle"
                          *ngIf="matchData['1'].result"
                     >
@@ -45,13 +46,14 @@
                 </div>
                 <div class="column">
                     <div class="team row collapse align-middle">
-                        <div class="small-5 column text-center">
+                        <div class="shrink column text-center">
                             <msl-team-avatar
+                                class="avatar"
                                 [size]="teamAvatarSize"
                                 [img]="matchData['2'].team.logoUrl"
                             ></msl-team-avatar>
                         </div>
-                        <div class="column text-right">
+                        <div class="column text-center">
                             <div class="team-name text-ellipsis">{{matchData['2'].team.name}}</div>
                         </div>
                     </div>

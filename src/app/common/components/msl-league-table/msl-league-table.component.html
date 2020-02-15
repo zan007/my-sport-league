@@ -1,106 +1,112 @@
 <div class="league-table">
-    <div class="row">
-        <div class="small-20 column" *ngFor="let league of leagues">
-            <div class="row align-center">
-                <p class="column">{{league.name}}</p>
-            </div>
-            <div class="row align-center" *ngFor="let group of league.groups">
-                <div class="small-11 column">
-                    <div class="row">
-                        <div class="group-name">
-                            {{group.name}}
-                        </div>
-                    </div>
-                    <div class="row align-center table-header">
-                        <div class="column">
-                            <div class="row collapse">
-                                <div class="small-1 column">
-                                    Pos
-                                </div>
-                                <div class="small-3 column">
-                                    Club
-                                </div>
-                                <div class="small-1 column">
-                                    MP
-                                </div>
-                                <div class="small-1 column">
-                                    W
-                                </div>
-                                <div class="small-1 column">
-                                    R
-                                </div>
-                                <div class="small-1 column">
-                                    P
-                                </div>
-                                <div class="small-2 column">
-                                    Points
-                                </div>
-                                <div class="small-2 column">
-                                    Form
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row table-content align-center">
-                        <div class="column small-12" *ngFor="let result of group.results">
-                            <div class="row collapse result-item align-middle">
-                                <div class="small-1 column">
-                                    <div class="flex-container align-middle">
-                                        <div>{{result.position}}</div>
-                                        <msl-chevron
-                                            *ngIf="result.trend !== 'STABLE'"
-                                            [color]="result.trend === 'UP' ? 'green' : 'red'"
-                                            [type]="result.trend === 'UP' ? 'up' : 'down'"
-                                            [size]="'small'"
-                                        ></msl-chevron>
-                                        <div
-                                            class="icon icon-dot"
-                                            *ngIf="result.trend === 'STABLE'">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="small-3 column">
-                                    <msl-team-avatar
-                                        [size]="'small'"
-                                        [img]="result.team.logoUrl"
-                                        [description]="result.team.name"
-                                    >
-                                    </msl-team-avatar>
-                                    <div class="team-name">
-                                        {{result.team.name}}
-                                    </div>
-                                </div>
-                                <div class="small-1 column">
-                                    {{result.matchesCount}}
-                                </div>
-                                <div class="small-1 column">
-                                    {{result.wins}}
-                                </div>
-                                <div class="small-1 column">
-                                    {{result.draws}}
-                                </div>
-                                <div class="small-1 column">
-                                    {{result.loses}}
-                                </div>
-                                <div class="small-2 column">
-                                    <div class="points">
-                                        {{result.points}}
-                                    </div>
-                                </div>
-                                <div class="small-2 column">
-                                    <msl-team-results-trend [teamResults]="result.lastMatches"></msl-team-results-trend>
-                                </div>
+    <div class="row align-center"
+         *ngFor="let league of leagues"
+    >
+        <div class="small-12 column">
 
+            <h4>{{league.name}}</h4>
+        </div>
+        <div class="small-11 column"
+             *ngFor="let group of league.groups"
+        >
+            <div class="row">
+                <msl-significant-paragraph>
+                    {{group.name}}
+                </msl-significant-paragraph>
+            </div>
+            <div class="row align-center table-header">
+                <div class="column">
+                    <div class="row collapse">
+                        <div class="small-1 column">
+                            Pos
+                        </div>
+                        <div class="small-3 column">
+                            Club
+                        </div>
+                        <div class="small-1 column">
+                            MP
+                        </div>
+                        <div class="small-1 column">
+                            W
+                        </div>
+                        <div class="small-1 column">
+                            R
+                        </div>
+                        <div class="small-1 column">
+                            P
+                        </div>
+                        <div class="small-2 column">
+                            Points
+                        </div>
+                        <div class="small-2 column">
+                            Form
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row table-content align-center">
+                <div class="column small-12"
+                     *ngFor="let result of group.results"
+                >
+                    <div class="row collapse result-item align-middle">
+                        <div class="small-1 column">
+                            <div class="flex-container align-middle position">
+                                <div>{{result.position}}</div>
+                                <msl-chevron
+                                    *ngIf="result.trend !== 'STABLE'"
+                                    [color]="result.trend === 'UP' ? 'green' : 'red'"
+                                    [type]="result.trend === 'UP' ? 'up' : 'down'"
+                                    [size]="'small'"
+                                ></msl-chevron>
+                                <div
+                                    class="icon icon-dot"
+                                    *ngIf="result.trend === 'STABLE'"
+                                >
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row align-middle">
-                        <div class="column text-center">
-                            <msl-significant-link
-                                [text]="'Show more'"
-                            ></msl-significant-link>
+                        <div class="small-3 column">
+                            <msl-team-avatar
+                                [size]="'small'"
+                                [img]="result.team.logoUrl"
+                                [description]="result.team.name"
+                            >
+                            </msl-team-avatar>
+                            <div class="team-name">
+                                {{result.team.name}}
+                            </div>
                         </div>
+                        <div class="small-1 column">
+                            {{result.matchesCount}}
+                        </div>
+                        <div class="small-1 column">
+                            {{result.wins}}
+                        </div>
+                        <div class="small-1 column">
+                            {{result.draws}}
+                        </div>
+                        <div class="small-1 column">
+                            {{result.loses}}
+                        </div>
+                        <div class="small-2 column">
+                            <div class="points">
+                                {{result.points}}
+                            </div>
+                        </div>
+                        <div class="small-2 column">
+                            <msl-team-results-trend [teamResults]="result.lastMatches"></msl-team-results-trend>
+                        </div>
+
                     </div>
+                </div>
+            </div>
+            <div class="row align-middle"
+                 *ngIf="limitTo"
+            >
+                <div class="column text-center">
+                    <msl-significant-link
+                        [text]="'Show more'"
+                    ></msl-significant-link>
                 </div>
             </div>
         </div>

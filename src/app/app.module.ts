@@ -42,6 +42,7 @@ import { RoutingEffects } from './store/ui/routing/routing.effects';
         ApiService,
     ],
     bootstrap: [AppComponent],
+    exports: [],
 })
 export class AppModule {
 }

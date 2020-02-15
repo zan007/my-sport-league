@@ -12,7 +12,8 @@ import { MslTeamResultsTrendComponent } from './components/msl-team-results-tren
 import { MslSignificantLinkComponent } from './components/msl-significant-link/msl-significant-link.component';
 import { MslMatchComponent } from './components/msl-match/msl-match.component';
 import { MslDatePipe } from './pipes/msl-date/msl-date.pipe';
-
+import { MslMatchesAgendaComponent } from './components/msl-matches-agenda/msl-matches-agenda.component';
+import { MslSignificantParagraphComponent } from './components/msl-significant-paragraph/msl-significant-paragraph.component';
 
 const commonComponents = [
     MslButtonPrimaryComponent,
@@ -25,6 +26,8 @@ const commonComponents = [
     MslTeamResultsTrendComponent,
     MslSignificantLinkComponent,
     MslMatchComponent,
+    MslMatchesAgendaComponent,
+    MslSignificantParagraphComponent,
 ];
 const commonPipes = [
     MslDatePipe,
