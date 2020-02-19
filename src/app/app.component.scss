@@ -1,0 +1,8 @@
+@import "./src/assets/scss/common/constants/constants";
+
+main {
+    position: relative;
+    z-index: 2;
+    margin: 5rem 0 11rem;
+    background-color: $black;
+}

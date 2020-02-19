@@ -1,12 +1,18 @@
 @import "./src/assets/scss/common/constants/constants.scss";
 
 header {
-    position: sticky;
+    position: fixed;
     top: 0;
+    z-index: 3;
     width: 100%;
     min-height: 4rem;
     background-color: $almost-black;
     font-family: $font-medium;
+}
+
+img {
+    width: 35px;
+    height: 35px;
 }
 
 .menu-item {

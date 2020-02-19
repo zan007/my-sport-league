@@ -14,6 +14,7 @@ import { MslMatchComponent } from './components/msl-match/msl-match.component';
 import { MslDatePipe } from './pipes/msl-date/msl-date.pipe';
 import { MslMatchesAgendaComponent } from './components/msl-matches-agenda/msl-matches-agenda.component';
 import { MslSignificantParagraphComponent } from './components/msl-significant-paragraph/msl-significant-paragraph.component';
+import { MslFooterComponent } from './components/msl-footer/msl-footer.component';
 
 const commonComponents = [
     MslButtonPrimaryComponent,
@@ -28,6 +29,7 @@ const commonComponents = [
     MslMatchComponent,
     MslMatchesAgendaComponent,
     MslSignificantParagraphComponent,
+    MslFooterComponent
 ];
 const commonPipes = [
     MslDatePipe,

@@ -7,12 +7,24 @@
     <div *ngFor="let todayLeagueMatch of todayLeagueMatches">
         <h4 class="league-name">{{todayLeagueMatch.league.name}}</h4>
         <div class="row align-center-middle">
-            <div class="small-12 large-9 column">
+            <div class="small-12 column">
                 <msl-match
                     *ngFor="let match of todayLeagueMatch.matches"
                     [teamAvatarSize]="'large'"
                     [matchData]="match"
                 ></msl-match>
+            </div>
+            <div class="small-12 large-8 column">
+                <div class="flex-container align-spaced action-buttons">
+                    <msl-button-secondary
+                        [withBorder]="true"
+                    >
+                        Change match date
+                    </msl-button-secondary>
+                    <msl-button-primary>
+                        Confirm result
+                    </msl-button-primary>
+                </div>
             </div>
         </div>
     </div>

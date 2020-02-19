@@ -1,3 +1,5 @@
+@import "./src/assets/scss/common/mixins/mixins";
+
 .full-height {
     height: 100%;
 }
@@ -8,6 +10,18 @@
 
 .text-right {
     text-align: right;
+}
+
+.medium-text-right {
+    @include tablet {
+        text-align: right;
+    }
+}
+
+.small-text-right {
+    @include smartphone {
+        text-align: right;
+    }
 }
 
 .no-margin {

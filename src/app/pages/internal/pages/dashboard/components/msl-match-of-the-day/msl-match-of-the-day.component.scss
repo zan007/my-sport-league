@@ -1,4 +1,5 @@
 @import "./src/assets/scss/common/constants/constants";
+@import "./src/assets/scss/common/mixins/mixins";
 
 .match-of-the-day {
     min-height: 200px;
@@ -14,4 +15,9 @@ h2 {
 .league-name {
     color: $grey;
     font-family: $font-regular;
+}
+
+.action-buttons {
+    margin-top: 1rem;
+    text-align: center;
 }
