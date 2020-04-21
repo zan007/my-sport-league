@@ -4,18 +4,16 @@ import { Observable } from 'rxjs';
 
 @Component({
     selector: 'msl-main-header',
-    templateUrl: './msl-main-header.component.html',
-    styleUrls: ['./msl-main-header.component.scss']
+    templateUrl: './main-header.component.html',
+    styleUrls: ['./main-header.component.scss'],
 })
-export class MslMainHeaderComponent implements OnInit {
-
+export class MainHeaderComponent implements OnInit {
     @Input()
     public navigationItems: Observable<NavigationItem[]>;
 
-    constructor() { }
+    constructor() {}
 
     ngOnInit() {
-        console.log(this.navigationItems)
+        console.log(this.navigationItems);
     }
-
 }

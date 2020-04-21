@@ -3,11 +3,10 @@ import { Result } from '../../types/result';
 
 @Component({
     selector: 'msl-team-results-trend',
-    templateUrl: './msl-team-results-trend.component.html',
-    styleUrls: ['./msl-team-results-trend.component.scss'],
+    templateUrl: './team-results-trend.component.html',
+    styleUrls: ['./team-results-trend.component.scss'],
 })
-export class MslTeamResultsTrendComponent implements OnInit {
-
+export class TeamResultsTrendComponent implements OnInit {
     @Input()
     teamResults: Result[] = [];
 
@@ -16,17 +15,14 @@ export class MslTeamResultsTrendComponent implements OnInit {
 
     resultsTrend: Result[];
 
-    constructor() {
-    }
-
+    constructor() {}
 
     ngOnInit() {
         this.resultsTrend = this.countResultTrend();
-        console.log(this.teamResults)
+        console.log(this.teamResults);
     }
 
     countResultTrend() {
         return this.teamResults.slice(0, this.trendCount);
     }
-
 }

@@ -1,7 +1,7 @@
 <div class="match">
     <div class="row collapse align-middle">
         <div *ngIf="matchDate" class="shrink column match-date text-center">
-            {{ matchDate | mslDate: 'short' }}
+            {{ matchDate | DatePipe: 'short' }}
         </div>
 
         <div class="column align-middle">

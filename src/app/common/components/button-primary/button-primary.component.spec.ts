@@ -1,20 +1,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MslButtonSecondaryComponent } from './msl-button-secondary.component';
+import { ButtonPrimaryComponent } from './button-primary.component';
 
 describe('MslButtonComponent', () => {
-    let component: MslButtonSecondaryComponent;
-    let fixture: ComponentFixture<MslButtonSecondaryComponent>;
+    let component: ButtonPrimaryComponent;
+    let fixture: ComponentFixture<ButtonPrimaryComponent>;
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [MslButtonSecondaryComponent],
-        })
-            .compileComponents();
+            declarations: [ButtonPrimaryComponent],
+        }).compileComponents();
     }));
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(MslButtonSecondaryComponent);
+        fixture = TestBed.createComponent(ButtonPrimaryComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

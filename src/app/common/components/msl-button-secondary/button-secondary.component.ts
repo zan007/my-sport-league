@@ -3,11 +3,10 @@ import { ButtonTypes } from '../../types/button-types';
 
 @Component({
     selector: 'msl-button-secondary',
-    templateUrl: './msl-button-secondary.component.html',
-    styleUrls: ['./msl-button-secondary.component.scss'],
+    templateUrl: './button-secondary.component.html',
+    styleUrls: ['./button-secondary.component.scss'],
 })
-export class MslButtonSecondaryComponent implements OnInit {
-
+export class ButtonSecondaryComponent implements OnInit {
     @Input()
     public buttonType: ButtonTypes = 'button';
     @Input()
@@ -15,9 +14,7 @@ export class MslButtonSecondaryComponent implements OnInit {
     @Input()
     public withBorder = false;
 
-    constructor() {
-    }
+    constructor() {}
 
-    ngOnInit() {
-    }
+    ngOnInit() {}
 }

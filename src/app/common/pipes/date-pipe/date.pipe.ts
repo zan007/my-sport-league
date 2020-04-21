@@ -6,8 +6,7 @@ type dateFormats = 'long' | 'short';
 @Pipe({
     name: 'mslDate',
 })
-export class MslDatePipe implements PipeTransform {
-
+export class DatePipe implements PipeTransform {
     transform(value: string, format: dateFormats): string {
         if (format === 'short') {
             return moment(value).format('MMM DD');
@@ -15,5 +14,4 @@ export class MslDatePipe implements PipeTransform {
 
         return moment(value).format('YYYY.MM.DD');
     }
-
 }

@@ -4,11 +4,10 @@ import { Sizes } from '../../types/sizes';
 
 @Component({
     selector: 'msl-match',
-    templateUrl: './msl-match.component.html',
-    styleUrls: ['./msl-match.component.scss'],
+    templateUrl: './match.component.html',
+    styleUrls: ['./match.component.scss'],
 })
-export class MslMatchComponent implements OnInit {
-
+export class MatchComponent implements OnInit {
     @Input()
     matchData: MatchData;
 
@@ -18,12 +17,7 @@ export class MslMatchComponent implements OnInit {
     @Input()
     teamAvatarSize?: Sizes = 'small';
 
+    constructor() {}
 
-    constructor() {
-    }
-
-    ngOnInit() {
-
-    }
-
+    ngOnInit() {}
 }

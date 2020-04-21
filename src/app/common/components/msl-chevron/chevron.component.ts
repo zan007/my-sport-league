@@ -3,11 +3,10 @@ import { Sizes } from '../../types/sizes';
 
 @Component({
     selector: 'msl-chevron',
-    templateUrl: './msl-chevron.component.html',
-    styleUrls: ['./msl-chevron.component.scss'],
+    templateUrl: './chevron.component.html',
+    styleUrls: ['./chevron.component.scss'],
 })
-export class MslChevronComponent implements OnInit {
-
+export class ChevronComponent implements OnInit {
     @Input()
     type: 'up' | 'down';
 
@@ -17,10 +16,7 @@ export class MslChevronComponent implements OnInit {
     @Input()
     size: Sizes = 'medium';
 
-    constructor() {
-    }
+    constructor() {}
 
-    ngOnInit() {
-    }
-
+    ngOnInit() {}
 }

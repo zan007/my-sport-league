@@ -3,11 +3,10 @@ import { Sizes } from '../../types/sizes';
 
 @Component({
     selector: 'msl-team-avatar',
-    templateUrl: './msl-team-avatar.component.html',
-    styleUrls: ['./msl-team-avatar.component.scss'],
+    templateUrl: './team-avatar.component.html',
+    styleUrls: ['./team-avatar.component.scss'],
 })
-export class MslTeamAvatarComponent implements OnInit {
-
+export class TeamAvatarComponent implements OnInit {
     @Input()
     img?: string;
 
@@ -17,10 +16,7 @@ export class MslTeamAvatarComponent implements OnInit {
     @Input()
     size: Sizes = 'small';
 
-    constructor() {
-    }
+    constructor() {}
 
-    ngOnInit() {
-    }
-
+    ngOnInit() {}
 }

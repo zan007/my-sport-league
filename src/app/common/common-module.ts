@@ -1,58 +1,43 @@
 import { NgModule } from '@angular/core';
 import { CommonModule as CommonAngularModule } from '@angular/common';
 import { ApiService } from './services/api.service';
-import { MslButtonPrimaryComponent } from './components/msl-button-primary/msl-button-primary.component';
-import { MslButtonSecondaryComponent } from './components/msl-button-secondary/msl-button-secondary.component';
-import { MslMainHeaderComponent } from './components/msl-main-header/msl-main-header.component';
-import { MslUserAvatarComponent } from './components/msl-user-avatar/msl-user-avatar.component';
-import { MslLeagueTableComponent } from './components/msl-league-table/msl-league-table.component';
-import { MslChevronComponent } from './components/msl-chevron/msl-chevron.component';
-import { MslTeamAvatarComponent } from './components/msl-team-avatar/msl-team-avatar.component';
-import { MslTeamResultsTrendComponent } from './components/msl-team-results-trend/msl-team-results-trend.component';
-import { MslSignificantLinkComponent } from './components/msl-significant-link/msl-significant-link.component';
-import { MslMatchComponent } from './components/msl-match/msl-match.component';
-import { MslDatePipe } from './pipes/msl-date/msl-date.pipe';
-import { MslMatchesAgendaComponent } from './components/msl-matches-agenda/msl-matches-agenda.component';
-import { MslSignificantParagraphComponent } from './components/msl-significant-paragraph/msl-significant-paragraph.component';
-import { MslFooterComponent } from './components/msl-footer/msl-footer.component';
+import { ButtonPrimaryComponent } from './components/button-primary/button-primary.component';
+import { ButtonSecondaryComponent } from './components/msl-button-secondary/button-secondary.component';
+import { MainHeaderComponent } from './components/msl-main-header/main-header.component';
+import { UserAvatarComponent } from './components/msl-user-avatar/user-avatar.component';
+import { LeagueTableComponent } from './components/msl-league-table/league-table.component';
+import { ChevronComponent } from './components/msl-chevron/chevron.component';
+import { TeamAvatarComponent } from './components/msl-team-avatar/team-avatar.component';
+import { TeamResultsTrendComponent } from './components/msl-team-results-trend/team-results-trend.component';
+import { SignificantLinkComponent } from './components/msl-significant-link/significant-link.component';
+import { MatchComponent } from './components/msl-match/match.component';
+import { MatchesAgendaComponent } from './components/msl-matches-agenda/matches-agenda.component';
+import { SignificantParagraphComponent } from './components/msl-significant-paragraph/significant-paragraph.component';
+import { FooterComponent } from './components/msl-footer/footer.component';
+import { DatePipe } from './pipes/date-pipe/date.pipe';
 
 const commonComponents = [
-    MslButtonPrimaryComponent,
-    MslButtonSecondaryComponent,
-    MslMainHeaderComponent,
-    MslUserAvatarComponent,
-    MslLeagueTableComponent,
-    MslChevronComponent,
-    MslTeamAvatarComponent,
-    MslTeamResultsTrendComponent,
-    MslSignificantLinkComponent,
-    MslMatchComponent,
-    MslMatchesAgendaComponent,
-    MslSignificantParagraphComponent,
-    MslFooterComponent
+    ButtonPrimaryComponent,
+    ButtonSecondaryComponent,
+    MainHeaderComponent,
+    UserAvatarComponent,
+    LeagueTableComponent,
+    ChevronComponent,
+    TeamAvatarComponent,
+    TeamResultsTrendComponent,
+    SignificantLinkComponent,
+    MatchComponent,
+    MatchesAgendaComponent,
+    SignificantParagraphComponent,
+    FooterComponent,
 ];
-const commonPipes = [
-    MslDatePipe,
-];
-const commonServices = [
-    ApiService,
-];
-
+const commonPipes = [DatePipe];
+const commonServices = [ApiService];
 
 @NgModule({
     imports: [CommonAngularModule],
-    declarations: [
-        ...commonComponents,
-        ...commonPipes,
-    ],
-    exports: [
-        ...commonComponents,
-        ...commonPipes,
-        CommonAngularModule,
-    ],
-    providers: [
-        ...commonServices,
-    ],
+    declarations: [...commonComponents, ...commonPipes],
+    exports: [...commonComponents, ...commonPipes, CommonAngularModule],
+    providers: [...commonServices],
 })
-export class CommonModule implements NgModule {
-}
+export class CommonModule implements NgModule {}
