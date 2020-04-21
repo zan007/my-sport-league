@@ -2,13 +2,17 @@
     <div class="column">
         <div class="row full-height align-justify align-middle">
             <div class="column shrink">
-                <img src="assets/images/logo_2.png"/>
+                <img src="assets/images/logo_2.png" />
             </div>
             <div class="column full-height">
-                <div class="flex-container align-middle align-right full-height">
-                    <nav class="menu-item flex-container full-height align-middle"
-                         *ngFor="let navigationItem of (navigationItems | async)">
-                        <div>{{navigationItem.title}}</div>
+                <div
+                    class="flex-container align-middle align-right full-height"
+                >
+                    <nav
+                        class="menu-item flex-container full-height align-middle"
+                        *ngFor="let navigationItem of navigationItems | async"
+                    >
+                        <div>{{ navigationItem.title }}</div>
                     </nav>
                     <msl-user-avatar></msl-user-avatar>
                 </div>

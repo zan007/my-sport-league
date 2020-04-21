@@ -1,16 +1,10 @@
 <form [formGroup]="form" class="login-form">
-
-  <label for="cif">
+    <label for="cif">
         Wpisz cif
-  </label>
-  <input type="text"
-         id="cif"
-         placeholder="Cif"
-         formControlName="cif">
+    </label>
+    <input type="text" id="cif" placeholder="Cif" formControlName="cif" />
 
-  <button (click)="login()"
-          [disabled]="!form.valid">
-    Login
-  </button>
-
+    <button (click)="login()" [disabled]="!form.valid">
+        Login
+    </button>
 </form>

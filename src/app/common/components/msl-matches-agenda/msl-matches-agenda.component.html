@@ -1,24 +1,22 @@
 <div class="matches-agenda">
-    <div class="row"
-         *ngFor="let league of leagues"
-    >
+    <div class="row" *ngFor="let league of leagues">
         <div class="small-12 column">
-            <h4>{{league.name}}</h4>
+            <h4>{{ league.name }}</h4>
         </div>
         <div class="small-12 column">
             <div *ngFor="let group of league.groups">
                 <div class="row">
                     <div class="small-12 column">
                         <msl-significant-paragraph>
-                            {{group.name}}
+                            {{ group.name }}
                         </msl-significant-paragraph>
                     </div>
                 </div>
-                <div class="row single-match"
-                     *ngFor="let match of group.matches"
+                <div
+                    class="row single-match"
+                    *ngFor="let match of group.matches"
                 >
                     <div class="small-12 column">
-
                         <msl-match
                             [matchDate]="match.date"
                             [matchData]="match.matchData"
@@ -26,8 +24,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
-
 </div>
