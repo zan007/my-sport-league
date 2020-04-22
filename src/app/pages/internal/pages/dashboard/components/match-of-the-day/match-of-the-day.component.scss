@@ -1,0 +1,23 @@
+@import "../../../../../../../assets/scss/common/constants/constants";
+@import "../../../../../../../assets/scss/common/mixins/mixins";
+
+.match-of-the-day {
+    min-height: 200px;
+    padding: 1rem;
+}
+
+h2 {
+    color: $white;
+    font-family: $font-regular;
+    font-size: 1.5rem;
+}
+
+.league-name {
+    color: $grey;
+    font-family: $font-regular;
+}
+
+.action-buttons {
+    margin-top: 1rem;
+    text-align: center;
+}

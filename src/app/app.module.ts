@@ -8,16 +8,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { EffectsModule } from '@ngrx/effects';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { reducers } from './store/app-reducer';
+import { reducers } from '@store/app-reducer';
 import { environment } from '../environments/environment';
-import { ApiService } from './common/services/api.service';
-import { CommonModule } from './common/common-module';
-import { RoutingEffects } from './store/ui/routing/routing.effects';
+import { ApiService } from '@common/services/api.service';
+import { CommonModule } from '@common/common-module';
+import { RoutingEffects } from '@store/ui/routing/routing.effects';
 
 @NgModule({
-    declarations: [
-        AppComponent,
-    ],
+    declarations: [AppComponent],
     imports: [
         CommonModule,
         HttpClientModule,
@@ -29,20 +27,18 @@ import { RoutingEffects } from './store/ui/routing/routing.effects';
                 strictActionImmutability: true,
             },
         }),
-        StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
+        StoreDevtoolsModule.instrument({
+            maxAge: 25,
+            logOnly: environment.production,
+        }),
         StoreRouterConnectingModule.forRoot({
             stateKey: 'router',
             routerState: RouterState.Minimal,
         }),
-        EffectsModule.forRoot([
-            RoutingEffects,
-        ]),
+        EffectsModule.forRoot([RoutingEffects]),
     ],
-    providers: [
-        ApiService,
-    ],
+    providers: [ApiService],
     bootstrap: [AppComponent],
     exports: [],
 })
-export class AppModule {
-}
+export class AppModule {}

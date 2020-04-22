@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { NavigationItem } from './common/types/navigation-item';
+import { NavigationItem } from '@common/types/navigation-item';
 
 @Component({
     selector: 'app-root',
@@ -12,23 +12,26 @@ export class AppComponent {
 
     menuItems: Observable<NavigationItem[]>;
 
-    constructor() {
-
-    }
+    constructor() {}
 
     ngOnInit() {
-        this.menuItems = of([{
-            title: 'first',
-            routerLink: '/first'
-        }, {
-            title: 'second',
-            routerLink: '/second'
-        }, {
-            title: 'third',
-            routerLink: '/third'
-        }, {
-            title: 'fourth',
-            routerLink: '/fourth'
-        }]);
+        this.menuItems = of([
+            {
+                title: 'first',
+                routerLink: '/first',
+            },
+            {
+                title: 'second',
+                routerLink: '/second',
+            },
+            {
+                title: 'third',
+                routerLink: '/third',
+            },
+            {
+                title: 'fourth',
+                routerLink: '/fourth',
+            },
+        ]);
     }
 }

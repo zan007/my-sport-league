@@ -1,4 +1,4 @@
-@import "./src/assets/scss/common/constants/constants";
+@import "../constants/constants";
 
 @mixin box-shadow ($color) {
     box-shadow:  0 3px 10px -2px  rgba($color, .64);
