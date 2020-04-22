@@ -8,5 +8,5 @@ export const uiReducer: ActionReducerMap<AppState> = {
 
         //TODO: Add menu reducer
         //menu: MenuReducer,
-    }
+    },
 };

@@ -1,21 +1,20 @@
-import {createReducer, on} from '@ngrx/store';
+import { createReducer, on } from '@ngrx/store';
 import * as routingActions from './routing.actions';
 
 export interface RoutingState {
-  currentPage: string;
+    currentPage: string;
 }
 
 const initialRoutingState: RoutingState = {
-  currentPage: ''
+    currentPage: '',
 };
 
 export const RoutingReducer = createReducer(
-  initialRoutingState,
-  on(routingActions.goToPage, (state, action) => {
-
-    return {
-      ...state,
-      currentPage: action.page
-    };
-  })
+    initialRoutingState,
+    on(routingActions.goToPage, (state, action) => {
+        return {
+            ...state,
+            currentPage: action.page,
+        };
+    })
 );

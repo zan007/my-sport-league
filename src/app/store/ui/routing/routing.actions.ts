@@ -1,9 +1,12 @@
-import {createAction, props} from '@ngrx/store';
-import {NavigationExtras} from '@angular/router';
+import { createAction, props } from '@ngrx/store';
+import { NavigationExtras } from '@angular/router';
 
 interface GoToPageProps {
-  page: string;
-  options?: NavigationExtras;
+    page: string;
+    options?: NavigationExtras;
 }
 
-export const goToPage = createAction('[Router] - Change page', props<GoToPageProps>());
+export const goToPage = createAction(
+    '[Router] - Change page',
+    props<GoToPageProps>()
+);

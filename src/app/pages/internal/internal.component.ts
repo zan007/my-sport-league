@@ -3,18 +3,10 @@ import { Component, OnInit } from '@angular/core';
 @Component({
     selector: 'internal',
     templateUrl: './internal.html',
-    styleUrls: ['./internal.scss']
+    styleUrls: ['./internal.scss'],
 })
 export class InternalComponent implements OnInit {
+    constructor() {}
 
-
-    constructor() {
-
-    }
-
-    ngOnInit() {
-
-    }
-
-
+    ngOnInit() {}
 }

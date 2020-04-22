@@ -1,3 +1,3 @@
 export interface AuthStep {
-  state: "CIF" | "PASSWORD" | "SUCCESS";
+    state: 'CIF' | 'PASSWORD' | 'SUCCESS';
 }

@@ -1,7 +1,5 @@
-import {createReducer} from '@ngrx/store';
+import { createReducer } from '@ngrx/store';
 
-const initialState = {
-
-};
+const initialState = {};
 
 export const internalReducer = createReducer(initialState);

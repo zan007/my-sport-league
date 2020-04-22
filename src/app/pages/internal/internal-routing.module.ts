@@ -6,14 +6,11 @@ const routes: Routes = [
     {
         path: 'dashboard',
         component: DashboardComponent,
-    }
+    },
 ];
 
-@NgModule ({
-    imports: [
-        RouterModule.forChild (routes),
-    ],
-    exports: [RouterModule]
+@NgModule({
+    imports: [RouterModule.forChild(routes)],
+    exports: [RouterModule],
 })
-export class InternalRoutingModule {
-}
+export class InternalRoutingModule {}
